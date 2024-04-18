@@ -20,15 +20,13 @@ function UncontrolledExample() {
               <Carousel.Item>
                 <img src={RDR} alt='' className='img'/>
                 <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <h3> Red Dead Redemption 2</h3>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img src={Valorant} alt='' className='img'/>
                   <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Valorant</h3>
                   </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
