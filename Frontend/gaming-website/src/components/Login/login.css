@@ -1,0 +1,115 @@
+#container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+} 
+
+#container2 {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 0 10px black;
+    background-color: white;
+}
+#container3, #container4 {
+    width: 50%;
+}
+
+#container3 img {
+    height: 100%;
+    width: 100%;
+}
+
+#container4 h2 {
+    color: black;
+    margin: 50px !important;
+    font-size: 32px;
+}
+
+#container4{
+    color: white;
+    text-align: center;
+}
+
+#loginemail, #loginpass {
+    width: 300px;
+    height: 40px;
+    margin: 10px;
+    padding: 0 18px;
+    border-radius: 20px;
+    border: black 3px solid;
+}
+
+#loginlinks {
+    margin: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#loginbutton {
+    margin: 10px 20px;
+    width: 120px;
+    height: 45px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    border: black 3px solid;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* Responsive Styling */
+@media screen and (max-width: 811px) {
+
+    #container1 {
+        background-color: orange;
+    }
+
+    #container2 {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    #container3 {
+      display: none; /* Hide the image on smaller screens */
+    }
+  
+    #container4 {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+
+    #container1 {
+        background-color: orange;
+    }
+
+    #container2{
+        width: 81%;
+    }
+
+    #container4 h2 {
+      font-size: 24px;
+      margin: 20px 20px 10px 20px;
+    }
+  
+    #loginemail, #loginpass {
+      width: calc(100% - 60px);
+    }
+  
+    #loginlinks {
+      margin: 10px 20px;
+    }
+  
+    #loginbutton {
+      width: calc(100% - 150px);
+      margin: 10px 20px;
+    }
+  }
+  

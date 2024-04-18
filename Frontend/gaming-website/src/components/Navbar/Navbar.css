@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 21px;
+  }
+
+  .mr-auto {
+    color: white;
+  }
+  
+  .navbar-collapse {
+    flex-grow: 1;
+  }
+  
+  .navbar-nav:last-child {
+    margin-left: auto;
+  }
+  
+  .navbar-brand img {
+    height: 70px;
+  }
+  
