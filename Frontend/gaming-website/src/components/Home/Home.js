@@ -20,15 +20,13 @@ function UncontrolledExample() {
               <Carousel.Item>
                 <img src={RDR} alt='' className='img'/>
                 <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <h3> Red Dead Redemption 2</h3>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img src={Valorant} alt='' className='img'/>
                   <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Valorant</h3>
                   </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -48,7 +46,7 @@ function UncontrolledExample() {
                 <Card.Text>
                 Dive into one the best game.
                 </Card.Text>
-                <Button variant="primary">Read More</Button>
+                <Button variant="primary" href='https://www.rockstargames.com/gta-online' target='blank'>Read More</Button>
               </Card.Body>
             </Card>
 
@@ -59,7 +57,7 @@ function UncontrolledExample() {
                 <Card.Text>
                 Want to roll back to cowboy's time?
                 </Card.Text>
-                <Button variant="primary">Read More</Button>
+                <Button variant="primary" href='https://www.rockstargames.com/reddeadredemption2' target='blank'>Read More</Button>
               </Card.Body>
             </Card>
 
@@ -70,7 +68,7 @@ function UncontrolledExample() {
                 <Card.Text>
                 Looking for a Career in Esports!
                 </Card.Text>
-                <Button variant="primary">Read More</Button>
+                <Button variant="primary" href='https://playvalorant.com/en-us/' target='blank'>Read More</Button>
               </Card.Body>
             </Card>
           </div>

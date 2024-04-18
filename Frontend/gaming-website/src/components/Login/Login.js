@@ -4,6 +4,7 @@ import LoginImage from '../images/loginimg.jpg';
 import axios from 'axios';
 
 import './login.css';
+import Navbar from '../Navbar/navbar';
 
 const Login = () => {
 
@@ -43,6 +44,8 @@ const submitting = async (e) => {
   
 
   return (
+    <>
+    <Navbar />
     <div id='container1'>
       <div id='container2'>
         <div id='container3'>
@@ -60,7 +63,7 @@ const submitting = async (e) => {
                         <input id='loginpass' placeholder='Password' name="password" value={formData.password} onChange={inputChange}/>
                     </div>
                     <div id='loginlinks'>
-                        <Link>Forgot password</Link>
+                        <p id='text21'>click here to Creat a new account</p>
                         <Link to= '/signup'>SignUp</Link>
                     </div>
 
@@ -70,6 +73,7 @@ const submitting = async (e) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

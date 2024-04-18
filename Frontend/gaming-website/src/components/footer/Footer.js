@@ -16,9 +16,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <p>Follow us on social media for more updates:<br />
-            <a href="https://www.facebook.com/example">Facebook</a><br />
-            <a href="https://twitter.com/example">Twitter</a><br />
-            <a href="https://www.instagram.com/example">Instagram</a>
+            <a>Facebook</a><br />
+            <a>Twitter</a><br />
+            <a>Instagram</a>
           </p>
         </div>
       </div>
