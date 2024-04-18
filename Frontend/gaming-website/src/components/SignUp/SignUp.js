@@ -74,7 +74,6 @@ const Signup = () => {
       if (response.data.message === 'User created successfully') {
           navigate('/login');
       }
-        alert('user already exists.');
     } catch (error) {
       console.error('Error submitting login form:', error);
     }
