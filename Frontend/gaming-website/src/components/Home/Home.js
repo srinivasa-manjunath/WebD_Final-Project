@@ -48,7 +48,7 @@ function UncontrolledExample() {
                 <Card.Text>
                 Dive into one the best game.
                 </Card.Text>
-                <Button variant="primary">Read More</Button>
+                <Button variant="primary" href='https://www.rockstargames.com/gta-online' target='blank'>Read More</Button>
               </Card.Body>
             </Card>
 
@@ -59,7 +59,7 @@ function UncontrolledExample() {
                 <Card.Text>
                 Want to roll back to cowboy's time?
                 </Card.Text>
-                <Button variant="primary">Read More</Button>
+                <Button variant="primary" href='https://www.rockstargames.com/reddeadredemption2' target='blank'>Read More</Button>
               </Card.Body>
             </Card>
 
@@ -70,7 +70,7 @@ function UncontrolledExample() {
                 <Card.Text>
                 Looking for a Career in Esports!
                 </Card.Text>
-                <Button variant="primary">Read More</Button>
+                <Button variant="primary" href='https://playvalorant.com/en-us/' target='blank'>Read More</Button>
               </Card.Body>
             </Card>
           </div>

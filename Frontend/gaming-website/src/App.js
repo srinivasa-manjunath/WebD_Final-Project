@@ -11,6 +11,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import ContactUs from './components/Contact/ContactUs';
 import AdminPanel from './AdminPanel/AdminPage/AdminPage';
 import Feedback from './AdminPanel/Feedbacks/Feedbacks';
+import Wallpapers from './components/Wallpaper/Wallpaper'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/wallpapers" element={<Wallpapers />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />

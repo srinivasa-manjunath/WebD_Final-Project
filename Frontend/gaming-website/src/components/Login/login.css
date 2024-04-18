@@ -43,6 +43,10 @@
     border: black 3px solid;
 }
 
+#text21 {
+  color: black;
+}
+
 #loginlinks {
     margin: 10px 40px;
     display: flex;

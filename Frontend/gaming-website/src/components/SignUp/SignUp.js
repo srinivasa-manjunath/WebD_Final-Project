@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 import SignupImage from '../images/loginimg.jpg';
+import Navbar from '../Navbar/navbar';
 
 import './SignUp.css';
 
@@ -80,42 +81,45 @@ const SignUp = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div id='container6'>
       <div id='container7'>
         <div id='container8'>
-            <img src={SignupImage} alt=''/>
+          <img src={SignupImage} alt='' />
         </div>
         <div id='container9'>
-            <h2>Sign Up</h2>
-            <div id='container10'>
-                <div>
-                    <div>
-                      <input id='username' name='username' placeholder='username' value={formData.username} onChange={inputChange}/>
-                        <div className="error">{errors.username}</div>
-                    </div>
-                    <div>
-                        <input id='signupemail' name='email' placeholder='Email' value={formData.email} onChange={inputChange}/>
-                        <div className="error">{errors.email}</div>
-                    </div>
-                    <div>
-                        <input id='signuppass' name='password' placeholder='Password' value={formData.password} onChange={inputChange} type="password"/>
-                        <div className="error">{errors.password}</div>
-                    </div>
-                    <div>
-                        <input id='signupconfirm' name='confirmpassword' placeholder='Confirm Password' value={formData.confirmpassword} onChange={inputChange} type="password"/>
-                        <div className="error">{errors.confirmpassword}</div>
-                    </div>
-                    <div id='signuplinks'>
-                        <div>Already have an account? <Link to="/login">Login</Link></div>
-                    </div>
+          <h2>Sign Up</h2>
+          <div id='container10'>
+            <div>
+              <div>
+                <input id='username' name='username' placeholder='username' value={formData.username} onChange={inputChange} />
+                <div className="error">{errors.username}</div>
+              </div>
+              <div>
+                <input id='signupemail' name='email' placeholder='Email' value={formData.email} onChange={inputChange} />
+                <div className="error">{errors.email}</div>
+              </div>
+              <div>
+                <input id='signuppass' name='password' placeholder='Password' value={formData.password} onChange={inputChange} type="password" />
+                <div className="error">{errors.password}</div>
+              </div>
+              <div>
+                <input id='signupconfirm' name='confirmpassword' placeholder='Confirm Password' value={formData.confirmpassword} onChange={inputChange} type="password" />
+                <div className="error">{errors.confirmpassword}</div>
+              </div>
+              <div id='signuplinks'>
+                <div>Already have an account? <Link to="/login">Login</Link></div>
+              </div>
 
-                    <button id='signupbutton' onClick={submitting}>Sign Up</button>
-                    
-                </div>
+              <button id='signupbutton' onClick={submitting}>Sign Up</button>
+
             </div>
+          </div>
         </div>
       </div>
     </div>
+    </>
   )
 }
 
