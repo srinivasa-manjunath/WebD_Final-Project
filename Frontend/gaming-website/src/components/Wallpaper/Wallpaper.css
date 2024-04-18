@@ -1,0 +1,33 @@
+/* WallpaperGallery.css */
+
+/* Wallpaper Gallery Container */
+.wallpaper-gallery {
+    padding: 20px;
+  }
+  
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  /* Wallpaper Image */
+  .wallpaper {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .wallpaper:hover {
+    transform: scale(1.05);
+  }
+  
+  .wallpaper.active {
+    border: 2px solid #007bff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
