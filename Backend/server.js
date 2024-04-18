@@ -23,6 +23,7 @@ app.use(session({
   }
 }));
 
+
 /*----------------------------------- Mongodb Connection -----------------------------------------------*/
 
 mongoose.connect('mongodb://localhost:27017/final-project')
@@ -52,12 +53,29 @@ const UserSchema = new mongoose.Schema({
     },
     role: {
       type: String,
-      default: 'user'
+      default: 'User'
     }
     
   });
 
 const User = mongoose.model('logininfo', UserSchema);
+
+const feedbackSchema = new mongoose.Schema({
+  Name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  feedback: {
+    type: String,
+    required: true
+  }
+});
+
+const Feedback = mongoose.model('Feedback', feedbackSchema);
 
 
 app.post('/signup', async (req, res) => {
@@ -104,7 +122,7 @@ app.post('/login', async (req, res) =>{
   
       req.session.userId = user._id;
 
-      return res.status(200).json({ message: 'Login successful', username: user.username});
+      return res.status(200).json({ message: 'Login successful', username: user.username, role: user.role});
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: 'Internal server error' });
@@ -129,6 +147,25 @@ app.get('/authentication', (req, res) => {
     return res.json({ isLoggedIn: false });
   }
 });
+
+app.post("/feedback", async (req, res) => {
+
+  try {
+
+    const { Name, email, feedback } = req.body;
+
+    const newFeedback = new Feedback({Name, email, feedback})
+
+    await newFeedback.save();
+    res.status(201).json({ message: 'sent feedback successfully', feedback: newFeedback });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+
+})
+
+
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 

@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import RDR from '../images/rdr2.jpg';
 import Valorant from '../images/valorant.jpg';
 import GTA from '../images/gta v.jpg'
+import Navbar from '../Navbar/navbar';
 
 
 import './Home.css';
@@ -12,6 +13,7 @@ import './Home.css';
 function UncontrolledExample() {
   return (
     <>
+    <Navbar />
       <div id='container11'>
         <div id='container12'>
           <Carousel>
