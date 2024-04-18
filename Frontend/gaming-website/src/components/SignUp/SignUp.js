@@ -7,7 +7,7 @@ import SignupImage from '../images/loginimg.jpg';
 
 import './SignUp.css';
 
-const Signup = () => {
+const SignUp = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -119,4 +119,4 @@ const Signup = () => {
   )
 }
 
-export default Signup;
+export default SignUp;
