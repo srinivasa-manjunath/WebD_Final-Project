@@ -1,7 +1,9 @@
 import { Container, Typography, Box, TextField, Button, Grid, Card, CardContent } from '@mui/material';
 import './Contactus.css';
 
+
 const Contact = () => {
+
   return (
     <>
       <Container maxWidth="sm" className="container">
@@ -35,7 +37,7 @@ const Contact = () => {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <Button variant="contained" color="primary" fullWidth className="button">
+                  <Button variant="contained" color="primary" fullWidth className="button" >
                     Send Message
                   </Button>
                 </Grid>
