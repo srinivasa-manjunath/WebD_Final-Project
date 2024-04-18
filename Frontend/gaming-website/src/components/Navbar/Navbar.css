@@ -20,4 +20,18 @@
   .navbar-brand img {
     height: 70px;
   }
+
+  .auth-button {
+    margin: 0 20px;
+    border: 3px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 50px;
+  }
   
