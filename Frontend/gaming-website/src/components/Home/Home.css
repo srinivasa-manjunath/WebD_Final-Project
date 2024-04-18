@@ -34,26 +34,24 @@
     color: white;
 }
 
-/* Adjustments for Tablet and Mobile Screens */
 @media (max-width: 811px) {
     #container15 {
-      flex-direction: column; /* Change flex direction to column */
+      flex-direction: column;
     }
   
     .card {
-      width: 90%; /* Make cards occupy 90% of the width on smaller screens */
-      margin: 20px auto; /* Adjust margin for smaller screens */
+      width: 90%;
+      margin: 20px auto;
     }
   }
   
-  /* Adjustments for Mobile Screens */
   @media (max-width: 391px) {
     .img {
-      height: 50vh; /* Further reduce image height for smaller screens */
+      height: 50vh;
     }
   
     .card {
-      width: 90%; /* Make cards occupy 90% of the width on smaller screens */
+      width: 90%;
     }
   }
   
