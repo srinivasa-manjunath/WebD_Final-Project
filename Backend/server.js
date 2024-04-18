@@ -3,13 +3,24 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
 import bodyParser from 'body-parser';
+import session from 'express-session';
 
 
 const app = express();
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
+
+app.use(session({
+  secret: 'IRONMAN',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { 
+    secure: process.env.NODE_ENV === 'production' 
+  }
 }));
 
 /*----------------------------------- Mongodb Connection -----------------------------------------------*/
@@ -48,23 +59,6 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('logininfo', UserSchema);
 
-const feedbackSchema = new mongoose.Schema({
-  Name: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  feedback: {
-    type: String,
-    required: true
-  }
-});
-
-const Feedback = mongoose.model('Feedback', feedbackSchema);
-
 
 app.post('/signup', async (req, res) => {
   try {
@@ -88,23 +82,53 @@ app.post('/signup', async (req, res) => {
 });
 
 
-app.post("/feedback", async (req, res) => {
+app.post('/login', async (req, res) =>{
 
-  try {
+  const { email, password } = req.body;
 
-    const { Name, email, feedback } = req.body;
+    console.log(email, password);
+  
+    try {
 
-    const newFeedback = new Feedback({Name, email, feedback})
+      const user = await User.findOne({ email:email });
+  
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+  
+      if (!isPasswordValid) {
+        return res.status(401).json({ message: 'Invalid password' });
+      }
+  
+      req.session.userId = user._id;
 
-    await newFeedback.save();
-    res.status(201).json({ message: 'sent feedback successfully', feedback: newFeedback });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
+      return res.status(200).json({ message: 'Login successful', username: user.username});
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: 'Internal server error' });
+    }
 
 })
 
+app.post('/logout', (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      return res.status(500).json({ message: 'Could not log out, please try again' });
+    }
+    res.clearCookie('connect.sid');
+    return res.status(200).json({ message: 'Logout successful' });
+  });
+}); 
+
+app.get('/authentication', (req, res) => {
+  if (req.session.userId) {
+    return res.json({ isLoggedIn: true });
+  } else {
+    return res.json({ isLoggedIn: false });
+  }
+});
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 
