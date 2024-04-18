@@ -16,7 +16,7 @@ const NavigationBar = () => {
             <Nav.Link href="/blogs">Blogs</Nav.Link>
             <Nav.Link href="/wallpapers">Wallpapers</Nav.Link>
             <Nav.Link href="/aboutus">AboutUs</Nav.Link>
-            <Nav.Link href="/contact">ContactUs</Nav.Link>
+            <Nav.Link href="/contactus">ContactUs</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/login">
