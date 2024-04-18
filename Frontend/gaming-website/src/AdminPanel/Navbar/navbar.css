@@ -1,0 +1,29 @@
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 21px;
+    background-color: orange;
+    color: white;
+    height: 100px;
+  }
+  
+  .navbar2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px 15px;
+  }
+  
+  #button2 {
+    color: white;
+    padding: 10px 20px;
+    font-size: 21px;
+    cursor: pointer;
+  }
+  
+  #button2:hover {
+    background-color: white;
+    color: black;
+  }
+  

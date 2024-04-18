@@ -27,12 +27,15 @@ const submitting = async (e) => {
       console.log(response.data);
 
       if (response.data.message === 'Login successful') {
-          navigate('/');
-          window.location.reload();
-        } 
-        else {
-          navigate('/login');
+        if (response.data.role === 'Admin') {
+            navigate('/adminpanel');
+        } else {
+            navigate('/');
         }
+        window.location.reload();
+    } else {
+        navigate('/login');
+    }
   } catch (error){
       console.error('Error submitting login form:', error);
   }
