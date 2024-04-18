@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer';
 import AboutUs from './components/AboutUs/AboutUs';
 import ContactUs from './components/Contact/ContactUs';
 import AdminPanel from './AdminPanel/AdminPage/AdminPage';
+import Feedback from './AdminPanel/Feedbacks/Feedbacks';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
 
         <Route path='/adminpanel' element={<AdminPanel />} />
+        <Route path='/feedbacks' element={<Feedback />} />
 
       </Routes>
       <Footer />

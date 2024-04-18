@@ -165,6 +165,17 @@ app.post("/feedback", async (req, res) => {
 
 })
 
+app.get('/feedbacks', async (req, res) => {
+  try {
+    const feedbacks = await Feedback.find();
+    res.status(200).json(feedbacks);
+  } catch (error) {
+    console.error('Failed to fetch data', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+
 
 
 /*----------------------------------------------------------------------------------------------------------------------*/
