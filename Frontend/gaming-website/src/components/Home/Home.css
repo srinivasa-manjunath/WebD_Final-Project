@@ -33,3 +33,27 @@
     padding-top: 60px;
     color: white;
 }
+
+/* Adjustments for Tablet and Mobile Screens */
+@media (max-width: 811px) {
+    #container15 {
+      flex-direction: column; /* Change flex direction to column */
+    }
+  
+    .card {
+      width: 90%; /* Make cards occupy 90% of the width on smaller screens */
+      margin: 20px auto; /* Adjust margin for smaller screens */
+    }
+  }
+  
+  /* Adjustments for Mobile Screens */
+  @media (max-width: 391px) {
+    .img {
+      height: 50vh; /* Further reduce image height for smaller screens */
+    }
+  
+    .card {
+      width: 90%; /* Make cards occupy 90% of the width on smaller screens */
+    }
+  }
+  
